@@ -1,0 +1,21 @@
+---
+import Icon from "astro-icon";
+import { socials } from "../util/socials";
+---
+
+<div class="flex flex-wrap gap-2 mt-4">
+  {
+    socials.map((social) => (
+      <a
+        href={social.url}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={"ErikGXDev's " + social.name + " Profile"}
+        class="flex bg-neutral-800/60 hover:bg-neutral-800 transition-colors p-2 rounded-md gap-2 flex-row-reverse"
+      >
+        <span>{social.name}</span>
+        <Icon name={social.icon} size="24" />
+      </a>
+    ))
+  }
+</div>
